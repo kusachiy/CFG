@@ -12,7 +12,9 @@ using System.Windows.Forms;
 namespace CFG
 {
     public partial class Form1 : Form
-    {       
+    {
+        string pathInput = "input2.txt";
+        string pathOutput = "output2.txt";
         public Form1()
         {
             InitializeComponent();
@@ -21,7 +23,7 @@ namespace CFG
         private void load_data_Click(object sender, EventArgs e)
         {
             Grammar.SetNonTerms(QuickRead());
-            StreamReader sr = new StreamReader("input.txt");
+            StreamReader sr = new StreamReader(pathInput);
             while (!sr.EndOfStream)
             {
                 Rule rule;
@@ -39,7 +41,7 @@ namespace CFG
 
         private void save_data_Click(object sender, EventArgs e)
         {
-            StreamWriter sw = new StreamWriter("output.txt");
+            StreamWriter sw = new StreamWriter(pathOutput);
             foreach (var item in Grammar.NonTerms)
             {
                 sw.WriteLine(item.rule.ToString());
@@ -50,7 +52,7 @@ namespace CFG
 
         char[] QuickRead()
         {
-            StreamReader sr = new StreamReader("input.txt");
+            StreamReader sr = new StreamReader(pathInput);
             string s = sr.ReadToEnd();
             List<char> nonterms = new List<char>();
             foreach (var chr in s)
@@ -61,6 +63,12 @@ namespace CFG
             }
             sr.Close();
             return nonterms.ToArray();          
+        }
+
+        private void transform_Click(object sender, EventArgs e)
+        {
+            Grammar.Convert();
+            label1.Text = "Преобразовано";
         }
     }
 }

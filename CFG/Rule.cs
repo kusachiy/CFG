@@ -10,16 +10,16 @@ namespace CFG
     class Rule
     {
         NonTerm left;
-        Block[] right;
+        List<Block> right;
 
         public Rule(char left, params string[] right)
         {
             this.left = Grammar.NonTerms.Find(x => x.symbol == left);
-            this.left.rule = this; 
-            this.right = new Block[right.Length];
+            this.left.rule = this;
+            this.right = new List<Block>();
             for (int i = 0; i < right.Length; i++)
             {
-                this.right[i] = new Block(right[i]);
+                this.right.Add(new Block(right[i]));
             }
         }
 
@@ -32,7 +32,6 @@ namespace CFG
             }
             return false;
         }
-
         public bool HasAPartContainingOnly(NonTerm[] nts)
         {
             foreach (var block in right)
@@ -43,22 +42,25 @@ namespace CFG
             }
             return false;
         }
-
+        public void RemoveBlockWithNonTerm(NonTerm nt)
+        {
+            right.RemoveAll(x => x.ContainsNonTerm(nt));
+        }
 
 
         public override string ToString()
         {
             string s = "";
             s += string.Format("{0} => ", left);
-            for (int i = 0; i < right.Length-1; i++)
+            for (int i = 0; i < right.Count-1; i++)
             {
                 s += string.Format("{0} | ",right[i].ToString());
             }
-            s += right[right.Length - 1].ToString();
+            s += right[right.Count - 1].ToString();
             return s;
         }
 
         public NonTerm GetLeft { get { return left; } }
-        public Block[] GetRight { get { return right; } }
+        public List<Block> GetRight { get { return right; } }
     }
 }

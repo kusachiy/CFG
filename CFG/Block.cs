@@ -41,10 +41,9 @@ namespace CFG
             return true;
 
         }
-
         public override string ToString()
         {
             return block;
-        }
+        }        
     }
 }

@@ -1,3 +1,5 @@
 S -> a|At|bb
 A -> S|ta|BS
 B -> SaB
+C -> AS|BB
+D -> BD

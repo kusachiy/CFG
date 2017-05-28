@@ -7,3 +7,12 @@ C:\Users\Каркуша\Documents\Visual Studio 2015\Projects\CFG\CFG\obj\Debug\
 C:\Users\Каркуша\Documents\Visual Studio 2015\Projects\CFG\CFG\obj\Debug\CFG.csproj.GenerateResource.Cache
 C:\Users\Каркуша\Documents\Visual Studio 2015\Projects\CFG\CFG\obj\Debug\CFG.exe
 C:\Users\Каркуша\Documents\Visual Studio 2015\Projects\CFG\CFG\obj\Debug\CFG.pdb
+C:\Users\hrusha\Desktop\files'\Что-то нужное\CFG\CFG\bin\Debug\CFG.exe.config
+C:\Users\hrusha\Desktop\files'\Что-то нужное\CFG\CFG\obj\Debug\CFG.exe
+C:\Users\hrusha\Desktop\files'\Что-то нужное\CFG\CFG\obj\Debug\CFG.pdb
+C:\Users\hrusha\Desktop\files'\Что-то нужное\CFG\CFG\obj\Debug\CFG.csprojResolveAssemblyReference.cache
+C:\Users\hrusha\Desktop\files'\Что-то нужное\CFG\CFG\obj\Debug\CFG.Form1.resources
+C:\Users\hrusha\Desktop\files'\Что-то нужное\CFG\CFG\obj\Debug\CFG.Properties.Resources.resources
+C:\Users\hrusha\Desktop\files'\Что-то нужное\CFG\CFG\obj\Debug\CFG.csproj.GenerateResource.Cache
+C:\Users\hrusha\Desktop\files'\Что-то нужное\CFG\CFG\bin\Debug\CFG.exe
+C:\Users\hrusha\Desktop\files'\Что-то нужное\CFG\CFG\bin\Debug\CFG.pdb

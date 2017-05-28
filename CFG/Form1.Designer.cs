@@ -31,6 +31,7 @@
             this.load_data = new System.Windows.Forms.Button();
             this.save_data = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.transform = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // load_data
@@ -45,7 +46,7 @@
             // 
             // save_data
             // 
-            this.save_data.Location = new System.Drawing.Point(169, 13);
+            this.save_data.Location = new System.Drawing.Point(301, 12);
             this.save_data.Name = "save_data";
             this.save_data.Size = new System.Drawing.Size(138, 47);
             this.save_data.TabIndex = 1;
@@ -62,11 +63,22 @@
             this.label1.Size = new System.Drawing.Size(0, 24);
             this.label1.TabIndex = 2;
             // 
+            // transform
+            // 
+            this.transform.Location = new System.Drawing.Point(157, 13);
+            this.transform.Name = "transform";
+            this.transform.Size = new System.Drawing.Size(138, 47);
+            this.transform.TabIndex = 3;
+            this.transform.Text = "Преобразовать";
+            this.transform.UseVisualStyleBackColor = true;
+            this.transform.Click += new System.EventHandler(this.transform_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(315, 114);
+            this.ClientSize = new System.Drawing.Size(527, 114);
+            this.Controls.Add(this.transform);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.save_data);
             this.Controls.Add(this.load_data);
@@ -82,6 +94,7 @@
         private System.Windows.Forms.Button load_data;
         private System.Windows.Forms.Button save_data;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button transform;
     }
 }
 
