@@ -1,0 +1,3 @@
+S => a | At | bb
+A => S | ta | BS
+B => SaB

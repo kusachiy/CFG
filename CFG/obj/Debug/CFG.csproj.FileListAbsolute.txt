@@ -1,0 +1,9 @@
+C:\Users\Каркуша\Documents\Visual Studio 2015\Projects\CFG\CFG\bin\Debug\CFG.exe.config
+C:\Users\Каркуша\Documents\Visual Studio 2015\Projects\CFG\CFG\bin\Debug\CFG.exe
+C:\Users\Каркуша\Documents\Visual Studio 2015\Projects\CFG\CFG\bin\Debug\CFG.pdb
+C:\Users\Каркуша\Documents\Visual Studio 2015\Projects\CFG\CFG\obj\Debug\CFG.csprojResolveAssemblyReference.cache
+C:\Users\Каркуша\Documents\Visual Studio 2015\Projects\CFG\CFG\obj\Debug\CFG.Form1.resources
+C:\Users\Каркуша\Documents\Visual Studio 2015\Projects\CFG\CFG\obj\Debug\CFG.Properties.Resources.resources
+C:\Users\Каркуша\Documents\Visual Studio 2015\Projects\CFG\CFG\obj\Debug\CFG.csproj.GenerateResource.Cache
+C:\Users\Каркуша\Documents\Visual Studio 2015\Projects\CFG\CFG\obj\Debug\CFG.exe
+C:\Users\Каркуша\Documents\Visual Studio 2015\Projects\CFG\CFG\obj\Debug\CFG.pdb
