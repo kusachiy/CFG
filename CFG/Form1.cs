@@ -13,8 +13,9 @@ namespace CFG
 {
     public partial class Form1 : Form
     {
-        string pathInput = "input2.txt";
-        string pathOutput = "output2.txt";
+        string pathInput = "input.txt";
+        string pathIntermediate = "intermediate.txt";
+        string pathOutput = "output.txt";
         public Form1()
         {
             InitializeComponent();
@@ -39,8 +40,23 @@ namespace CFG
             label1.Text = "Загружено";
         }
 
+        private void transform_Click(object sender, EventArgs e)
+        {
+            Grammar.BuildWithoutEmpty();
+            StreamWriter sw = new StreamWriter(pathIntermediate);
+            foreach (var item in Grammar.NonTerms)
+            {
+                sw.WriteLine(item.rule.ToString());
+            }
+            label1.Text = "Преобразовано и получен промежуточный результат";
+            sw.Close();
+        }
+
+
+
         private void save_data_Click(object sender, EventArgs e)
         {
+            Grammar.BuildWithoutNotAttainable();
             StreamWriter sw = new StreamWriter(pathOutput);
             foreach (var item in Grammar.NonTerms)
             {
@@ -65,10 +81,5 @@ namespace CFG
             return nonterms.ToArray();          
         }
 
-        private void transform_Click(object sender, EventArgs e)
-        {
-            Grammar.Convert();
-            label1.Text = "Преобразовано";
-        }
     }
 }

@@ -20,8 +20,8 @@ namespace CFG
                 NonTerms.Add(new NonTerm { symbol = nt });
             }
         }
-        public static void Convert()
-        {
+        public static void BuildWithoutEmpty()
+        {          
             List<NonTerm> useful = new List<NonTerm>();
             // шаг 1: добавляем в список полезных нетерминалы имеющие прямой вывод терминала.
             foreach (var nt in NonTerms)
@@ -51,6 +51,34 @@ namespace CFG
                 }
             }
             //шаг 4: заменяем исходную грамматику на новую
+            NonTerms = useful;
+        }
+        public static void BuildWithoutNotAttainable()
+        {
+            List<NonTerm> useful = new List<NonTerm>();
+            // шаг 1: добавляем в список достижимый нетерминал S
+            useful.Add(NonTerms.First(x => x.symbol == 'S'));
+            // шаг 2: добавляем рекурсивно в список достижимых нетерминалы, достижимые из уже добаленных. 
+            bool hasChanges = true;
+            while (hasChanges)
+            {
+                hasChanges = false;
+                foreach (var nt in useful)
+                {
+                    foreach (var nt2 in NonTerms)
+                    {
+                        if (nt.rule.HasAPartContainingNonTerm(nt2))
+                            if (!useful.Contains(nt2))
+                            {
+                                useful.Add(nt2);
+                                hasChanges = true;
+                            }
+                    }
+                    if (hasChanges)
+                        break;          
+                }
+            }           
+            //шаг 3: заменяем исходную грамматику на новую
             NonTerms = useful;
         }
     }

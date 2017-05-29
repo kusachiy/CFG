@@ -31,7 +31,7 @@ namespace CFG
         {
             return nonterms.Contains(n);
         }
-        public bool ContainsNonTerms(NonTerm[] n)
+        public bool ContainsAllNonTerms(NonTerm[] n)
         {
             for (int i = 0; i < n.Length; i++)
             {

@@ -38,7 +38,7 @@
             // 
             this.load_data.Location = new System.Drawing.Point(13, 13);
             this.load_data.Name = "load_data";
-            this.load_data.Size = new System.Drawing.Size(138, 47);
+            this.load_data.Size = new System.Drawing.Size(125, 47);
             this.load_data.TabIndex = 0;
             this.load_data.Text = "Загрузить грамматику";
             this.load_data.UseVisualStyleBackColor = true;
@@ -46,11 +46,11 @@
             // 
             // save_data
             // 
-            this.save_data.Location = new System.Drawing.Point(301, 12);
+            this.save_data.Location = new System.Drawing.Point(275, 12);
             this.save_data.Name = "save_data";
-            this.save_data.Size = new System.Drawing.Size(138, 47);
+            this.save_data.Size = new System.Drawing.Size(125, 47);
             this.save_data.TabIndex = 1;
-            this.save_data.Text = "Выгрузить грмматику";
+            this.save_data.Text = "Выгрузить итог";
             this.save_data.UseVisualStyleBackColor = true;
             this.save_data.Click += new System.EventHandler(this.save_data_Click);
             // 
@@ -65,9 +65,9 @@
             // 
             // transform
             // 
-            this.transform.Location = new System.Drawing.Point(157, 13);
+            this.transform.Location = new System.Drawing.Point(144, 13);
             this.transform.Name = "transform";
-            this.transform.Size = new System.Drawing.Size(138, 47);
+            this.transform.Size = new System.Drawing.Size(125, 47);
             this.transform.TabIndex = 3;
             this.transform.Text = "Преобразовать";
             this.transform.UseVisualStyleBackColor = true;
@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 114);
+            this.ClientSize = new System.Drawing.Size(416, 133);
             this.Controls.Add(this.transform);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.save_data);

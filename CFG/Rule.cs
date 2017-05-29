@@ -32,12 +32,21 @@ namespace CFG
             }
             return false;
         }
+        public bool HasAPartContainingNonTerm(NonTerm nt)
+        {
+            foreach (var block in right)
+            {
+                if (block.ContainsNonTerm(nt))
+                    return true;
+            }
+            return false;
+        }
         public bool HasAPartContainingOnly(NonTerm[] nts)
         {
             foreach (var block in right)
             {
                 if (block.GetCountOfNonTerm == nts.Length)
-                    if(block.ContainsNonTerms(nts))
+                    if(block.ContainsAllNonTerms(nts))
                         return true;
             }
             return false;
