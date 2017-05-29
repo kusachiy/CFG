@@ -9,10 +9,12 @@ namespace CFG
     static class Grammar
     {       
         public static List<NonTerm> NonTerms;
+
         static Grammar()
         {
             NonTerms = new List<NonTerm>();
         }
+
         public static void SetNonTerms(char[] nonterms)
         {
             foreach (var nt in nonterms)
@@ -20,6 +22,7 @@ namespace CFG
                 NonTerms.Add(new NonTerm { symbol = nt });
             }
         }
+
         public static void BuildWithoutEmpty()
         {          
             List<NonTerm> useful = new List<NonTerm>();
@@ -38,7 +41,10 @@ namespace CFG
                 {
                     if (nt.rule.HasAPartContainingOnly(useful.ToArray()))
                         if (!useful.Contains(nt))
+                        {
                             useful.Add(nt);
+                            hasChanges = true;
+                        }
                 }
             }
             //шаг 3: удаляем из правил, содержащих в левой части полезные нетерминалы, блоки с бесполезными нетерминалами в правой части.
@@ -53,6 +59,7 @@ namespace CFG
             //шаг 4: заменяем исходную грамматику на новую
             NonTerms = useful;
         }
+
         public static void BuildWithoutNotAttainable()
         {
             List<NonTerm> useful = new List<NonTerm>();

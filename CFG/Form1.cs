@@ -52,8 +52,6 @@ namespace CFG
             sw.Close();
         }
 
-
-
         private void save_data_Click(object sender, EventArgs e)
         {
             Grammar.BuildWithoutNotAttainable();

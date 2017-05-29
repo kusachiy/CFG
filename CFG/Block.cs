@@ -26,24 +26,27 @@ namespace CFG
             }
         }
 
-        public int GetCountOfNonTerm { get { return nonterms.Count; } }
         public bool ContainsNonTerm(NonTerm n)
         {
             return nonterms.Contains(n);
         }
-        public bool ContainsAllNonTerms(NonTerm[] n)
+
+        public bool ContainsNonTerms(NonTerm[] n)
         {
             for (int i = 0; i < n.Length; i++)
             {
-                if (!nonterms.Contains(n[i]))
-                    return false;
+                if (nonterms.Contains(n[i]))
+                    return true;
             }
-            return true;
+            return false;
 
         }
+
         public override string ToString()
         {
             return block;
-        }        
+        }
+        
+        public int GetCountOfNonTerm { get { return nonterms.Count; } }
     }
 }

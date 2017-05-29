@@ -1,5 +1,10 @@
-S -> a|At|bb
-A -> S|ta|BS
-B -> SaB
-C -> AS|BB
-D -> BD
+S -> a|AB
+A -> AAA|BBB
+B -> AAA|BBB|q
+C -> D
+D -> EE
+E -> FF
+F -> D|E|F|b
+G -> aG|bH|cI
+H -> aG|bH|cI
+I -> aG|bH|cI

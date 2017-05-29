@@ -32,6 +32,7 @@ namespace CFG
             }
             return false;
         }
+
         public bool HasAPartContainingNonTerm(NonTerm nt)
         {
             foreach (var block in right)
@@ -41,21 +42,22 @@ namespace CFG
             }
             return false;
         }
+
         public bool HasAPartContainingOnly(NonTerm[] nts)
         {
             foreach (var block in right)
             {
-                if (block.GetCountOfNonTerm == nts.Length)
-                    if(block.ContainsAllNonTerms(nts))
+                //if (block.GetCountOfNonTerm == nts.Length)
+                    if(block.ContainsNonTerms(nts))
                         return true;
             }
             return false;
         }
+
         public void RemoveBlockWithNonTerm(NonTerm nt)
         {
             right.RemoveAll(x => x.ContainsNonTerm(nt));
         }
-
 
         public override string ToString()
         {

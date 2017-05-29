@@ -1,2 +1,3 @@
-S => a | At | bb
-A => S | ta
+S => a | AB
+B => AAA | BBB | q
+A => AAA | BBB

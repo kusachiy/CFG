@@ -9,7 +9,9 @@ namespace CFG
     class NonTerm
     {
         public char symbol { get; set; }
+
         public Rule rule { get; set; }
+
         public override string ToString()
         {
             return symbol.ToString();
